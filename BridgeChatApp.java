@@ -9,7 +9,9 @@ public class BridgeApp {
     // ===== SIMPLE STORAGE =====
     static String savedUsername = "";
     static String savedPassword = "";
-
+     static stage=0;
+//stage 0 ask how user feels 
+// stage 1 ask if they have eaten 
     // ===== USERNAME VALIDATION =====
     public static boolean isValidUsername(String username) {
         return username.length() >= 6 && username.contains("_");
@@ -56,19 +58,43 @@ public class BridgeApp {
     // ===== SIMPLE CHATBOT RESPONSE =====
     public static String getResponse(String message) {
 
-        message = message.toLowerCase();
+    message = message.toLowerCase();
 
-        if (message.contains("yes") || message.contains("good") || message.contains("happy") ||message.contains("great")||message.contains("ok")) {
-            return "Bridge: I'm glad you're feeling good,what happened today ";
+    // ===== STAGE 0: ASK FEELINGS =====
+    if (stage == 0) {
+
+        if (message.contains("good") || message.contains("happy") || message.contains("great") || message.contains("ok")) {
+            stage = 1;
+            return "Bridge: I'm glad you're feeling good , What did you eat today?";
         }
 
-        if (message.contains("no") || message.contains("sad") || message.contains("bad")) {
-            return "Bridge: I'm sorry to hear that. I'm here for you,how can i help, you should communcate with somone you trust  ";
+        if (message.contains("sad") || message.contains("bad") || message.contains("no")) {
+            stage = 1;
+            return "Bridge: I'm sorry to hear that Did you eat anything today?";
         }
 
-        return "Bridge: Tell me more...";
+        return "Bridge: How are you feeling today?";
     }
 
+    // ===== STAGE 1: ASK FOOD =====
+    if (stage == 1) {
+
+        if (message.contains("ate") || message.contains("food")) {
+            stage = 0; // reset conversation
+            return "Bridge: That's good ,Eating well is important for your health!";
+        }
+
+        if (message.contains("hungry") || message.contains("did not eat")) {
+            stage = 0; // reset
+            return "Bridge: You should try to eat something,It really helps your energy.";
+        }
+
+        stage = 0; // reset anyway
+        return "Bridge: Thank you for sharing, Take care of yourself!";
+    }
+
+    return "Bridge: Tell me more...";
+}
     // ===== REGISTER =====
     public static void Register() {
         String username;
