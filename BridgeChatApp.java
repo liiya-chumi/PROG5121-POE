@@ -58,12 +58,12 @@ public class BridgeApp {
 
         message = message.toLowerCase();
 
-        if (message.contains("yes") || message.contains("good") || message.contains("happy")) {
-            return "Bridge: I'm glad you're feeling good ";
+        if (message.contains("yes") || message.contains("good") || message.contains("happy") ||message.contains("great")||message.contains("ok")) {
+            return "Bridge: I'm glad you're feeling good,what happened today ";
         }
 
         if (message.contains("no") || message.contains("sad") || message.contains("bad")) {
-            return "Bridge: I'm sorry to hear that. I'm here for you ";
+            return "Bridge: I'm sorry to hear that. I'm here for you,how can i help, you should communcate with somone you trust  ";
         }
 
         return "Bridge: Tell me more...";
@@ -82,7 +82,7 @@ public class BridgeApp {
             username = input.nextLine();
 
             if (!isValidUsername(username)) {
-                System.out.println("Invalid username (min 6 chars + underscore)");
+                System.out.println("Invalid username (min 6 chars + underscore) please try again");
             }
 
         } while (!isValidUsername(username));
@@ -92,7 +92,7 @@ public class BridgeApp {
             password = input.nextLine();
 
             if (!isValidPassword(password)) {
-                System.out.println("Invalid password (min 8 chars + number + special char)");
+                System.out.println("Invalid password (min 8 chars + number + special char)please try again");
             }
 
         } while (!isValidPassword(password));
