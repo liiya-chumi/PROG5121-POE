@@ -38,44 +38,56 @@ public class BridgeAppTest {
     }
 
     // ===== CHATBOT =====
+   
     @Test
-    public void testPositiveResponse() {
+    public void testFeelingPositiveStartsFoodStage() {
+        resetBridge();
+
         String result = BridgeApp.getResponse("I am happy");
-        assertTrue(result.toLowerCase().contains("glad"));
+
+        assertTrue(result.toLowerCase().contains("what did you eat"));
+        assertEquals(1, BridgeApp.stage);
     }
 
     @Test
-    public void testNegativeResponse() {
+    public void testFeelingNegativeStartsFoodStage() {
+        resetBridge();
+
         String result = BridgeApp.getResponse("I am sad");
-        assertTrue(result.toLowerCase().contains("sorry"));
+
+        assertTrue(result.toLowerCase().contains("eat"));
+        assertEquals(1, BridgeApp.stage);
+    }
+
+    @Test
+    public void testFoodPositiveResponse() {
+        resetBridge();
+        BridgeApp.stage = 1;
+
+        String result = BridgeApp.getResponse("I ate good food");
+
+        assertTrue(result.toLowerCase().contains("good"));
+        assertEquals(0, BridgeApp.stage);
+    }
+
+    @Test
+    public void testFoodNegativeResponse() {
+        resetBridge();
+        BridgeApp.stage = 1;
+
+        String result = BridgeApp.getResponse("I did not eat");
+
+        assertTrue(result.toLowerCase().contains("eat"));
+        assertEquals(0, BridgeApp.stage);
     }
 
     @Test
     public void testNeutralResponse() {
+        resetBridge();
+
         String result = BridgeApp.getResponse("hello");
-        assertTrue(result.toLowerCase().contains("tell me more"));
+
+        assertTrue(result.toLowerCase().contains("how are you feeling"));
     }
 }
-   
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
-
-   
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    // End of variables declaration//GEN-END:variables
+  
