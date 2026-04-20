@@ -59,18 +59,18 @@ public class BridgeApp {
         message = message.toLowerCase();
 
         if (message.contains("yes") || message.contains("good") || message.contains("happy")) {
-            return "Bridge: I'm glad you're feeling good 😊";
+            return "Bridge: I'm glad you're feeling good ";
         }
 
         if (message.contains("no") || message.contains("sad") || message.contains("bad")) {
-            return "Bridge: I'm sorry to hear that. I'm here for you 💙";
+            return "Bridge: I'm sorry to hear that. I'm here for you ";
         }
 
         return "Bridge: Tell me more...";
     }
 
     // ===== REGISTER =====
-    public static void register() {
+    public static void Register() {
         String username;
         String password;
         String cellphone;
@@ -132,7 +132,7 @@ public class BridgeApp {
         String password = input.nextLine();
 
         if (username.equals(savedUsername) && password.equals(savedPassword)) {
-            System.out.println("Login successful! Welcome to Bridge 🎉");
+            System.out.println("Login successful! Welcome to Bridge ");
             chat();
         } else {
             System.out.println("Invalid login details");
@@ -198,25 +198,4 @@ public class BridgeApp {
     }
 }
   
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
-
-  
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    // End of variables declaration//GEN-END:variables
+   
