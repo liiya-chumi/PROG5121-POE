@@ -1,0 +1,65 @@
+[
+  {
+    "messageId": "7994858",
+    "messageNum": 1,
+    "sender": "Liya_",
+    "recipient": "+271111111111",
+    "content": "i love you you love me ",
+    "messageHash": "79:1:IME",
+    "status": "DISREGARDED"
+  },
+  {
+    "messageId": "6117280",
+    "messageNum": 2,
+    "sender": "Liya_",
+    "recipient": "+27111111111",
+    "content": "i like cake , pie and mushrooms  but i dont like them together ",
+    "messageHash": "61:2:ITOGETHER",
+    "status": "DISREGARDED"
+  },
+  {
+    "messageId": "6117280",
+    "messageNum": 2,
+    "sender": "Liya_",
+    "recipient": "+27111111111",
+    "content": "i like cake , pie and mushrooms  but i dont like them together ",
+    "messageHash": "61:2:ITOGETHER",
+    "status": "SENT"
+  },
+  {
+    "messageId": "8682069",
+    "messageNum": 3,
+    "sender": "Liya_",
+    "recipient": "+2711111111",
+    "content": "i liked reading the book hamlet and watch masterchef southafrica.",
+    "messageHash": "86:3:ISOUTHAFRICA.",
+    "status": "STORED"
+  },
+  {
+    "messageId": "9966573",
+    "messageNum": 4,
+    "sender": "Liya_",
+    "recipient": "+27111111111",
+    "content": "i will have a big house , and drive the car of my dreams ",
+    "messageHash": "99:4:IDREAMS",
+    "status": "SENT"
+  },
+  {
+    "messageId": "6223070",
+    "messageNum": 5,
+    "sender": "Liya_",
+    "recipient": "+27111111111",
+    "content": "i would like to go to the cinema with you on saturday",
+    "messageHash": "62:5:ISATURDAY",
+    "status": "SENT"
+  },
+  {
+    "messageId": "4581744",
+    "messageNum": 6,
+    "sender": "kea_",
+    "recipient": "+27888888888",
+    "content": "i miss you liys how have been , please send me your nsfas money ,i want to buy a new phone ",
+    "messageHash": "45:6:IPHONE",
+    "status": "SENT"
+  }
+]
